@@ -6,18 +6,49 @@ from cinema.views import (
     GenreViewSet,
     ActorViewSet,
     MovieViewSet,
-    MovieSessionViewSet, OrderViewSet, TicketViewSet
+    MovieSessionViewSet,
+    OrderViewSet,
+    TicketViewSet
 )
 
 
 router = DefaultRouter()
-router.register("cinema_halls", CinemaHallViewSet, basename="cinema_halls")
-router.register("genres", GenreViewSet, basename="genres")
-router.register("actors", ActorViewSet, basename="actors")
-router.register("movies", MovieViewSet, basename="movies")
-router.register("movie_sessions", MovieSessionViewSet, basename="movie_session")
-router.register("orders", OrderViewSet, basename="orders")
-router.register("tickets", TicketViewSet, basename="tickets")
+router.register(
+    "cinema_halls",
+    CinemaHallViewSet,
+    basename="cinema_halls"
+)
+router.register(
+    "genres",
+    GenreViewSet,
+    basename="genres"
+)
+router.register(
+    "actors",
+    ActorViewSet,
+    basename="actors"
+)
+router.register(
+    "movies",
+    MovieViewSet,
+    basename="movies"
+)
+router.register(
+    "movie_sessions",
+    MovieSessionViewSet,
+    basename="movie_session"
+)
+router.register(
+    "orders",
+    OrderViewSet,
+    basename="orders"
+)
+router.register(
+    "tickets",
+    TicketViewSet,
+    basename="tickets"
+)
+
 
 urlpatterns = [
     path("", include(router.urls))
